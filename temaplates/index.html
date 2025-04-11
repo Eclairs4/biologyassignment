@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microscope Size Calculator</title>
+</head>
+<body>
+  <h2>Microscope Size Calculator</h2>
+
+  <form method="POST">
+    <label for="id">ID:</label><br>
+    <input type="number" name="id" id="id" required><br><br>
+
+    <label for="microscope_size">Microscope Size (mm):</label><br>
+    <input type="number" step="0.01" name="microscope_size" id="microscope_size" required><br><br>
+
+    <label for="magnification">Magnification:</label><br>
+    <input type="number" step="0.01" name="magnification" id="magnification" required><br><br>
+
+    <input type="submit" value="Calculate">
+  </form>
+
+  {% if result %}
+    <h3>Actual Size: {{ result }} mm</h3>
+  {% endif %}
+</body>
+</html>
+
+
